@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "ZAI_API_KEY": "AQ.Ab8RN6Lg2mlDvjjNIqqJZaBnZBe-7VhPOP0aO51Apx9c0BvVDw"
+  },
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "functions": {
+    "app/api/chatbot/route.ts": {
+      "maxDuration": 30
+    }
+  }
+}
